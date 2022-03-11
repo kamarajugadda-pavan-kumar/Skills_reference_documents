@@ -133,7 +133,7 @@
 
 
 
-% ===================Basic Customizations
+% ===================Basic Customizations========
 
 % Paper size can be changed by passing it as an optional parameter to \documentclass[option]
 \documentclass[option]{article}
@@ -147,3 +147,126 @@ executivepaper
 
 
 
+% to make the entire document in landscape mode 
+\usepackage[landscape]{geometry}
+
+
+% to make part of the document in landscape mode
+\usepackage{pdflscape}
+\begin{landscape}
+\end{landscape}
+
+
+% to print page number in every page 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{page \thepage}
+
+
+% forcing page Break
+% stretched out the text to fill the page "soft" page break
+\pagebreak 
+
+% pushes the whitespace to the bottom "Hard' page break
+\newpage
+
+
+
+% =================User defined Commands===========
+
+% in preamble put the command
+\newcommand{\commandname}{definition}
+
+% example
+\newcommand{\R}{\mathbb{R}}
+% now command \R gives Real number symbol, the same output as \mathbb{R}
+
+
+
+% ==================Latex environments===============
+% everything in between \begin and \end is inside a environment where it behaves in a particular fashion
+\begin{document}
+    \begin{center}
+    \end{center}
+\end{document}
+
+% some of the environments are 
+% document - sets up the basic document structure
+% center - centers the text on the page
+% flushright - right-justifies the text on the page
+% flushleft - left justifies the text on the page
+% tabular - a text table environment
+% itemize and enumerate - both of them creates indented lists. Itemize command creates bullet points, where as Enumerate creates numbered list
+    \begin{itemize}
+        \item first item 
+        \item second item 
+        \begin{itemize}
+            \item First sub-item 
+            \item second sub-item 
+        \end{itemize}
+    \end{itemize}
+    
+
+    \begin{enumerate}
+        \item first item 
+        \item second item 
+        \begin{enumerate}
+            \item First sub-item 
+            \item second sub-item 
+        \end{enumerate}
+    \end{enumerate}
+
+    % you can customize the symbols before text
+    \begin{itemize}
+        \item first item 
+        \item[$\rightarrow$] second item -------------->        output is ->second item     
+        \item[] 3rd item ----------------->     empty [] gives blank space. output is  3rd item   
+        \begin{itemize}
+            \item First sub-item 
+            \item second sub-item 
+        \end{itemize}
+    \end{itemize}
+
+% you can further customize the lists with "enumitem" package
+\usepackage{enumitem}
+% use labels such as "\arabic*)" ,"\Roman*", "(\alpha*)","\roman*."
+\begin{enumerate}{label=\arabic*)}
+    \item first item 
+    \item second item 
+\end{enumerate}
+
+
+
+% ==============other minor commands
+% horizontal space , specify the length of space in {}
+\hspace{length}
+
+% vertical spaces
+\vspace{length}
+
+% boxes
+\fbox{text}
+
+% creating horizontal lines
+\hrulefill %fills the rest of the line with horizontal line
+\dotfill %fills the rest of the line with dotted line
+\rule{\linewidth}{0.4pt} % fisrt argument is width and second one is thickness
+
+
+% importing images
+\usepackage{graphicx}
+\includegraphics[width=8cm,height=4cm]{mylogo}
+
+
+% create various headers with different font sizes
+\section{first section}
+\subsection{first subsection}
+\subsubsection{first subsection}
+
+
+% hyperlinks
+\usepackage{hyperref}
+\ref{}
+\hyperref[label]{link text}
+\ref*{}  %to make references without hyperlinks
+\href{url}{text} % to create internet hyperlinks
