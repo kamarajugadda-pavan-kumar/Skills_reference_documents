@@ -1,0 +1,480 @@
+8-2:
+    when you go to a website, example "www.youtube.com",
+    1.the DNS converts it into a ip address
+    2.Then our browser sends a request to this IP address via HTTP(Hyper text transfer protocol)
+    HTTP is a protocol, i.e, it is a way to format data. It contains the data about the user IP , date, time, website IP etc.
+    3.The request hops between servers to the destination
+    4.When the request reaches the final server, it builds a response, usually HTML,CSS and javascript or Json etc and send it back.
+    5.When your browser receives it , it renders the page
+
+
+
+8-3:Common Tech Stacks
+    A "Tech Stack" is a list of all technologies need to build and run an application.
+    A "web stack" implies the tech stack that applies for web.
+
+    webstack: Front-End
+        1.HTML : HTML stands for Hyper Text Markup Language.
+                 It is used to design the front end portion of web pages using markup language.
+                 HTML is the combination of Hypertext and Markup language.
+                 Hypertext defines the link between the web pages.
+                 The markup language is used to define the text documentation within tag which defines the structure of web pages.
+        2.css : Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify
+                the process of making web pages presentable. CSS allows you to apply styles to web pages.
+                More importantly, CSS enables you to do this independent of the HTML that makes up each web page.
+        3.JavaScript: JavaScript is a famous scripting language used to create the magic on the sites to make the site
+                      interactive for the user. It is used to enhancing the functionality of a website to running cool games
+                      and web-based software.
+
+        Front End Frameworks and Libraries:
+        1."view" :
+        2."AngularJS" :AngularJs is a JavaScript open source front-end framework
+                       that is mainly used to develop single page web applications(SPAs).
+                       It is a continuously growing and expanding framework which provides
+                       better ways for developing web applications. It changes the static HTML to dynamic HTML.
+                       It is an open source project which can be freely used and changed by anyone.
+                       It extends HTML attributes with Directives, and data is bound with HTML.
+        3."React.js" :React is a declarative, efficient, and flexible JavaScript library for building user interfaces.
+                      ReactJS is an open-source, component-based front end library responsible only for the view layer of the application.
+                      It is maintained by Facebook.
+        4."jQuery" :jQuery is an open source JavaScript library that simplifies the interactions between an HTML/CSS document,
+                    or more precisely the Document Object Model (DOM), and JavaScript.
+                    Elaborating the terms, jQuery simplifies HTML document traversing and manipulation, browser event handling,
+                    DOM animations, Ajax interactions, and cross-browser JavaScript development.
+        5."Bootstrap" :Bootstrap is a free and open-source tool collection for creating responsive websites and web applications.
+                       It is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.
+        6."SASS" : It is the most reliable, mature and robust CSS extension language.
+                   It is used to extend the functionality of an existing CSS of a site including everything from
+                   variables, inheritance, and nesting with ease.
+        7.Some other libraries and frameworks are: Semantic-UI, Foundation, Materialize, Backbone.js, Express.js, Ember.js etc.
+
+    webstack: Back-End
+        1.server OS :windows or linux(most used) or MAC os
+        2.WebServer :A computer that hosts one or more websites on the Internet.
+                    "Hosting" means that all the web pages and their supporting files are available on that computer.
+                     The web server will send any web page from the website it is hosting to any user's browser, per user request.
+        3.Language:
+            PHP: PHP is a server-side scripting language designed specifically for web development.
+                Since, PHP code executed on server side so it is called server side scripting language.
+
+            C++: It is a general purpose programming language and widely used now a days for competitive programming.
+                It is also used as backend language.
+
+            Java: Java is one of the most popular and widely used programming language and platform.
+                  It is highly scalable. Java components are easily available.
+
+            Python: Python is a programming language that lets you work quickly and integrate systems more efficiently.
+
+            JavaScript: Javascript can be used as both (front end and back end) programming languages.
+
+            Node.js: Node.js is an open source and cross-platform runtime environment for executing JavaScript code outside of a browser.
+                     You need to remember that NodeJS is not a framework and it’s not a programming language.
+                     Most of the people are confused and understand it’s a framework or a programming language.
+                     We often use Node.js for building back-end services like APIs like Web App or Mobile App.
+                     It’s used in production by large companies such as Paypal, Uber, Netflix, Wallmart and so on.
+
+            The other back end program/scripting languages are: C#, Ruby, REST, GO etc.
+
+        4.Database
+        5.framework: Express, Django, Rails, Laravel, Spring etc.
+
+
+
+        commom webstack are:
+        1.LAMP(Linux,Apache,MySQL,PHP)
+        2.LAMR(Linux,Apache,MySQL,RUby)
+        3.WINS(Windows server,IIS,.NET,MS SQL)
+        4.MEAN(MongoDB,Express,Angular, Node.js)
+        5.MERN(MongoDB,Express,React, Node.js)
+
+        "stackshare.io" website has all the tech-stacks that companies use.
+
+8_4: - Static vs Dynamic Pages
+
+    Static web page:server sends the exact same information for every request
+    Dynamic web-pages: server can send back different information for every request, usually based on the request.
+
+8-5:
+
+    HTTP Request methods (or) HTTP verbs:
+    1.GET -fetch data from server
+    2.POST -create something on server
+    3.PUT -update something on server
+    4.DELETE -to delete something on server
+    5.HEAD
+    6.PATCH
+    7.CONNECT
+    8.TRACE
+    9.OPTIONS
+
+    We can classify these HTTP methods into two types.
+    1.safe method: These methods will not change data on server .Example-GET
+    2.unsafe method: These methods cahnge data on server.Example- DELETE,POST,PUT
+    3.Idempotent: The method is idempotent if an identical request can be made once or several times in a row with the same effect while leaving the server in the same state.
+                  In other words, an idempotent method should not have any side-effects. Example:GET, PUT, DELETE
+
+
+    status code:
+    1.200's - Its all good
+    2.400's -you screwed up
+    3.500's -we screwed up
+
+8-6:
+    "goormide.io" is used for virtual machine
+
+8-9:
+    Terminal command in Linux
+
+    ls (list subfolders)
+    pwd (print working directory)
+    cd (change directory)
+    cd.. (to go back to previous directory)
+    mkdir (make directory)
+    touch(create a new file)
+    rm (remove a file)
+    rm -r my_directory/ (to remove a directory)
+    clear (to clear terminal)
+    ls -a (-a shows all files including hidden files)
+    cp file_name path_to_copy/file_name (copy file)
+    mv file_name path_to_move/file_name (cuts and pastes)
+
+
+8-13: Intro to Node.js
+
+    Node.js is a runtime environment that allows JavaScript to run in a server
+    Now using Node.Js we can run JavaScript everywhere
+
+8-14:
+    to run a javascript file in console use
+    node file_name.js
+
+8-15:Intro to NPM
+    Node package manager(NPM) contains opensource packages that help in web development
+
+
+
+9-1:
+    Express is a web application framework for Node.js. Its used to serve web pages using node.js
+    Express can also be used to create API.
+
+9-2:
+    npm packages required are
+    express,
+    nodemon,
+    mongoose
+
+
+9-4:
+    command "npm init" creates "package.json" , which conatins the list of packages required to run your code.
+    This comes handy when you have to share your code with others, as sharing all the packages along with code becomes cumbersome.
+
+
+9-5:
+    const express= require('express');
+    const app= express();
+
+
+    //routes
+    app.get('/',(req,res)=>{
+    res.send('This is the root route');
+    });
+
+    app.get('/login',(req,res)=>{
+    res.send('this is Login route');
+    });
+
+    app.get('/productid/:id/comment/:comment',(req,res)=>{
+    res.send(`the product id is ${req.params.id} and comment is ${req.params.comment}`);
+    });
+
+    app.get('*',(req,res)=>{
+    res.send('thats a 404');
+    })
+
+    app.listen(3000,()=>{
+    console.log('app started');
+    });
+
+
+
+9-7:
+    for  Templating use EJS(Embeded JavaScript Templating).
+    Templating means the web page has a common format , but the data it displays keeps changing according to the need.
+
+9-8:
+    app.get('/users/:username',(req,res)=>{
+    res.render('username.ejs');
+    });
+
+    you need to use "res.render()" in order to display a file.
+
+    first you need to create a folder called 'views' in the directory that your node.js is running.
+    Then place the files that are rendered in it.
+
+
+
+9-10:
+    ".ejs" files are stored in a folder called "views". This is default folder, you dont need to mention the views folder anywhere else.
+
+    To add css and other files you can create a folder (lets say folder_name) and include
+     "app.use(express.static('folder_name'))" in 'app.js' file
+
+
+9-15:
+    for body-parser npm package
+
+    const bodyParser = require('body-parser');
+    app.use(bodyParser.urlencoded({extended: true}));
+
+    "req.body" , gives the directory of key-value pairs that are entered through a form in the web page
+
+9-16:
+    Api (Application programming interface) is software intermediary that allows two applications to talk to each other
+
+9-17 :
+    There are a variety of ways to make APi calls in javascript, such as using 'ajax',npm package called 'requests','jquery',or vanilla javascript functionality 'fetch'
+    API call is nothing but making a http request
+
+    syntax for 'fetch' is
+    fetch('url')
+        .then((data)=>{
+            return modified_data
+        })
+        .then((modified_data)=>{
+            return modified_data1
+        })
+        .then((modified_data1)=>{
+            ...
+        })
+        .catch((error)=>{})
+
+    Fetch runs in asynchronus manner, i.e, only after the first set of .then runs then it
+    returns some values or data to the next .then and so on. If an error occurs in the process
+    .catch catches it.
+
+9-22:
+    the process of killing a rouge node in goorm.ide is
+    sudo netstat -ltnp | grep -w ':3000'
+
+
+
+10-3:
+    use bootstrap website to get custom templates for css
+
+10-9:
+    What are databases?
+        . A data base (DB) is basically just a structured collection of data
+        DB's are usually controlled by a database management system(e.g, MySQL ,Oracle, MongoDB .etc)
+        Usually 'Database' refers to both, since the DB itself is pretty useless without the DBMS
+
+    Types of DB's
+        1.Relational or sequal(SQL):
+                -created in 1970's
+                -SQL =Structured Query Language
+                -store data in big tables of rows and columns
+                -Think like Excel spreadsheets
+                -Use unique keys to identify tables/rows
+                -very structured and you need to define each column on creation
+                -Tables can be linked easily, defining relationships
+                -Ex: MySQL,Oracle etc.
+        2.Non-Relational or non-sequal (NoSQL)
+                -Emerged in the late 2000's an alternative to SQL DB's
+                -Main difference is they are not rigidly structured, so data format can be modified on the fly
+                -Extremely flexible compared to SQL DB's
+                -Easier to scale and distribute than SQL DB's
+                -May be less stable in comparision to SQL DB's
+                -Not as standardized as SQL DB's
+
+
+            Two types of NoSQL DB's
+                1. Key-value stores: Extremely simple and store key-value pairs.
+                                     very useful for simple data, but can't grow if the
+                                     data becomes more complex.
+                                     Ex:- Amazon DynamoDB
+                2.Document stores:Basically store data as JSON documents within "collections".
+                                  (SQL have tables , NoSQL have collections).
+                                  Do require you to define a schema when a collection is created,but you can modify it at any time.
+                                  Ex:-MongoDB, CouchDB etc.
+
+
+10-11:
+    creating new document using mongoose
+
+    const config =require("../project_yelpClone/config.js");
+    const mongoose=require('mongoose');
+    mongoose.connect(config.db.connection,{useNewUrlParser:true, useUnifiedTopology: true});
+
+    const dishesSchema= new mongoose.Schema({
+	   dish_name: String,
+	   break_fast: Boolean,
+	   price: Number,
+	   description: String
+       })
+
+    const dish=mongoose.model('dish',dishesSchema);
+
+    const mydish =new dish({
+	   dish_name: 'idli',
+	   break_fast: true,
+	   price: 20,
+	   description: 'tasty'
+       });
+
+    #saving using .save()
+    mydish.save((err,dish)=>{
+	   if (err){
+		     console.log(err)
+	   }else{
+		console.log(dish);
+	       }
+        })
+
+    #saving using .create()
+    dish.create(mydish,(err,dish)=>{
+        if (err){
+         console.log(err)
+        }else{
+            console.log(dish)
+        }
+    })
+
+    #other easy way to create and avoid callback hell
+    dish.create(mydish)
+    .then((err,car)=>{
+        if (err) {
+         console.log(err)
+        }
+        else{
+            return dish
+        }
+    })
+    .then((dish)=>{
+        console.log(dish)
+    })
+
+
+11-1 and 11-2:
+    what are  Data associations?
+        Basically , they let us associate one piece of data with another piece of data
+        Three main types are:-
+        1.one to one
+        2.one to many
+        3.many to many data associations
+
+    why do we care?
+        It allows us to create meaningful relationships among our data points
+        We can do things like associate comments with users , students with classes etc.
+        Note that N0SQL databases don't technically require this, but it is often helpful and
+        more efficient
+
+    one to one:
+        When one piece of data is associated with another piece of data
+        Example: One movie has one director
+                one user has one password
+
+    one to many:
+        when one piece of data is associated with multiple other pieces of data.
+        This is by far the most common type.
+        Examples:
+            one reddit user has many posts
+            one Instagram account has many pictures
+            one world of Warcraft user has many characters
+            one movie has many actors.
+
+    Many to many:
+        When many pieces of data are associated with multiple other pieces of data
+        Example: multiple actors are associated with multiple movies
+        Multiple college students are associated with multiple classes.
+
+
+12-1:async/await functionality
+
+    A function can be made asynchronus by placing the word 'async' before the function name
+    Ex:-
+    async function name_of_function(x,y,z){
+        await code_line;
+    }
+
+    async ()=>{
+        await code_line;
+    }
+
+    declaring a function as async gives us the provision to use 'await' functionality, which automatically converts the code_line into a promise
+    Which means rest of the code execution happens only after the promise is fullfilled.
+
+
+12-5: Data b
+
+    Basically , grabbing a small subset of each document's data and putting it somewhere
+    for fast retrieval
+    Allows us to search through a smaller amount of data that directs us to the full
+    dataset
+
+    why do we care?
+    -simple speed
+    -any queries that use the indices we define will be much faster.
+
+    Default index by MongoDb
+        -MongoDb indexes the _id field by default
+        This is why we always find by _id if possible
+        But we can add other fields if we want
+
+    What are the negative of indexing?
+        -The more fields we index, the longer it takes to modify the
+        collection(create, edit and delete)
+        -It also takes up  more space
+        -So you generally only want to index fields you will query often, if possible
+
+
+13-1:
+    Authentication- Basically just a way to verify who you are.
+    Usually a username and password are used to Authentication.
+    Other options include certificates, tokens, biometrics etc.
+
+     Authorization- Determines if you have permission to do something.
+     Used after Authentication to give access to access to parts of an application.
+
+    Why do we care?
+    -after setting up Authentication, we can be relatively sure that the person
+    who logs in is who they say they are
+    -This means we can give them permission to do things that others dont have such as:
+         1)Edit/delete items that they create
+         2)post comments that are attached to their username
+         3)Access admin functions
+
+    Common levels of authorization are:
+     1)unauthenticated user
+     2)Authenticated User
+     3)Group Manager
+     4)Admin
+     5)SuperUser
+
+
+13-3: Intro to credential storage
+
+    Encryption and description are two ways
+    Encryption: Plain text+key ----->Algorithm----->cipher text
+    Decryption: Cipher text+key ---->Algorithm---->Plain text
+
+    But Hashing is only one way, and impossible to decrypt
+    Hashing: plain text ---->hash function---->hashed text
+
+    Salt is the extra random text that is added to password to make password more secure
+
+    credentials are generally stored as
+    {
+        _id: ObjectId('hisaiduauhiufhuhf6564'),
+        email:'my_email@gmail.com',
+        username:'my_username',
+        salt:'uisugfdsf654f6sd4f6sd4fdssd4g7f84g',
+        hash:'jgfdgsfhosdbsd645s+4g8g5f48g4df84g65f4g64f6g4
+        fd654g6df4g4fd64gfd46f84g68fd46g84df6g46dfs4g68df4g
+        6d4f9g4fd684g8df4g4f68g49d8f4g98df4g9fd9g4fd684g68f
+        d46gb4fd4b'
+    }
+
+    Note that password is never stored directly.
+
+13-4: We will be using passport Authentication library.
+        There are many strategies(example: google, Facebook, etc).
+        But we will use passport-local.

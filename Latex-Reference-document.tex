@@ -1,0 +1,149 @@
+% what is LATEX?
+% LATEX is a math typesetting program, which allows mathematicians to type mathematical equations easily
+
+%Latex document has two parts. 
+%First part is called Preamble and the second one is Document Environment
+
+
+%documentclass tells about what kind of document you are making
+% {article} is the most default choice, {beamer} is used for presentations
+\documentclass{article}
+\documentclass[letterpaper,11pt]{article}
+
+
+%packages gives extra Latex commands that helps us to make the document
+%{geometry} package helps us adjust margins
+\usepackage[margin=1.25in]{geometry}
+\usepackage[top=topmargin, bottom=bottommargin, left=leftmargin, right=rightmargin]{geometry}
+%{amsmath,amssymb} are helpful math packages
+\usepackage{amsmath,amssymb}
+%{graphicx} is used to include images
+\usepackage{graphicx}
+
+
+%the document environment starts with
+\begin{document}
+%ends with
+\end{document}
+
+
+
+%=============Basic Text Manupulation============%
+
+%inside [] you can pass optional arguments, such as font size. This would be the default font-size for document.
+\documentclass[10pt]{article}
+
+% But inside the document you can change the font size by using different commands
+\tiny
+\scriptsize
+\footnotesize
+\normalsize
+\large
+\Large
+\LARGE 
+\huge 
+\Huge 
+
+
+%=========== changing the Text sizes
+
+%if you dont use the {} ,the font switches to your desired one until you change it back explicitly 
+%using {} create a limited scope
+{\LARGE followed by your text}
+% other font size packages :extsizes, anyfontsize
+
+
+
+% ===========Font styles
+
+%turns your text into bold
+\textbf{your text}
+
+%turns into itallic
+\textit{}
+
+%underlines the text and is used for single words
+\underline{}
+
+%used for underlining long string of text
+\usepackage{ulem}
+\uline{your text}
+
+
+% ============Text Emphasis
+\emph{your text}
+
+% ========== Font Families
+% Roman
+\textrm{your text}
+% sans serif
+\textsf{your text}
+% typewriter text
+\texttt{your text}
+
+
+%============ Text Justification/Alignment
+%By default it is 'Fully justified Text', the text occupies both sides without leaving any spaces
+
+%Center Justified Text
+\begin{center} .... \end{center}
+
+%Left Justifies Text
+\begin{flushleft} .... \end{flushleft}
+
+%Right Justifies Text
+\begin{flushright} .... \end{flushright}
+
+
+
+% ================Line Breaks
+%\\ is used to switch to the next line
+\\
+
+%\\[\baselineskip] is used to switch to next line +1
+\\[\baselineskip]
+
+
+
+% =================Indentation
+% latex automatically indents new paragraphs, for new paragraph you need to seperate your text by blank line
+
+% \noindent is used if you want to skip indentation
+\noindent
+
+%if you want to change the indent size, you can set it in preamble
+\setlength{\parindent}{1cm}
+
+
+
+
+
+
+% ===================Tabular environment
+% {lcr} indicates three cols, with left justified, center justified, right justified
+% \hline is used for horizontal line
+% for vertical line use '|' in {|lc|r|}
+\begin{tabular}{lcr}
+    \hline
+    text & text & text \\
+    l    & c    & r 
+    \hline
+\end{tabular}
+
+
+
+
+% ===================Basic Customizations
+
+% Paper size can be changed by passing it as an optional parameter to \documentclass[option]
+\documentclass[option]{article}
+% options available are
+a4paper
+a5paper
+b5paper
+letterpaper
+legalpaper
+executivepaper
+
+
+

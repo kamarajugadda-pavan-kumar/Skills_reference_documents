@@ -1,0 +1,503 @@
+for html use "mdn docs"
+for css use "csszengarden.com"
+specificity calculator
+https://css-tricks.com  -------> flex box
+lowdash.com can be used for object methods
+
+Java script:
+3-3:
+ five primitive data types in JS
+ booleans: true or false (all lower case letters as they are case sensitive)
+ numbers (integers, float etc all are numbers)
+ strings (anything inside " " becomes strings )
+ null(all lower case letters as they are case sensitive)
+ undefined(all lower case letters as they are case sensitive)
+
+3-4:
+   operators in js
+   P(parenthesis)
+   E(exponents)
+   M(multiply)
+   D(Divide)
+   A(Add)
+   S(substract)
+
+   % is modulus used to obtain the remainder
+
+   length of a string can be obtained using "string".length
+   Individual letters in the string can be accessed using "string"[2]
+
+3-5:
+   const - doesn't allow you to change the value of a variable
+      example: const variablename="value"
+   let - allows you to change the value of the variable
+      example: let xyz=5
+
+3-6:
+
+   console.log("yxz") is used in a similar way as print, can be used for debugging
+
+   null is explicitly saying that there is nothing
+   undefined is the implicit value that the system assignes a variable when it is declared but not assigned any value
+
+3-7:
+   commenting in js
+   // this is a comment //
+   /* this is a comment*/
+
+   clear() clears the console
+
+   methods are similar to functions
+
+   alert(" ") is a method used to alert user, it appears in the form of a pop up
+
+   prompt("") is used to take input from user by using a popup
+
+3-8:
+   linking a js file to html , first create a .js file and in the <body> at the end add <script src= "filename.js"></script>
+   <script> should be included at the end of body because it has to load after HTML loads, so that it can work on and modify HTML content
+
+3-11:
+    boolean logic are statements that are either true or false
+    comparision operators used are
+    < less than
+    <= less than or equal to
+    > greater
+    >= greater than or equal to
+    === equal value and types
+    !== not equal in value and types
+
+    NaN is Not a numbers
+    NaN can never be compared to NaN
+3-12:
+    logical operators in js
+    && AND
+    || OR
+    ! Not
+
+    !!false , !!0, !!"" ,!!null , !!undefined , !!NaN  will all return a value false
+
+3-13:
+    conditionals
+    if (condition){
+
+    }
+    else if(condition){
+
+    }
+    else{
+
+    }
+
+3-15:
+    while loop
+
+    while(condition){
+
+    }
+
+3-16:
+    for loop
+    for(initialize ; condition ; each){
+
+    }
+
+
+4-2:
+    function examplename (variablename1="default",variablename2="default",...){
+        //code//
+        return something
+    };
+
+    when you call function name with parenthesis , it runs the function.
+    when used without parenthesis, it returns the function
+
+
+4_6:
+    another syntax for writing functions in javascript accorting to ES6 principles is
+
+    const function_name =(arguments)=>{
+    //code//
+    return something
+    };
+
+    If you want to write an anonymous function
+    ()=>{
+    //code//
+    return something
+    };
+
+    If the code is having a single line ,you can skip {} curly braces
+
+4-8:
+    what is scope?
+    scope is the context in which code is executed.
+    In other words ,scope defines what variables can be seen from any point in the code
+    There are 3 types of scope:
+        1.global scope: any variable outside of all functions are globally scoped. They can be accessed and changed from anywhere in the code.
+        2.function scope: any variable declared within a function body will be scoped to that function. They can be accessed and changed from only within their function
+        3.block scope: Block is something thats within curly braces. variables declared within a set of curly braces will be scoped to that block. They can be accessed and changed only from within their code block. Example 'if' block.
+
+    Inner functions can see outer scope variables, but outer scope can't see inner scope variables.
+
+    Try to minimize globally-scoped variables where ever possible.This is to prevent "name collisions" causing errors or bugs.
+
+
+4-9:
+    Functions Assigned to Variables
+    In JavaScript, functions are a data type just as strings, numbers, and arrays are data types. Therefore, functions can be assigned as values to variables, but are different from all other data types because they can be invoked.
+
+    let plusFive = (number) => {
+    return number + 5;
+    };
+    // f is assigned the value of plusFive
+    let f = plusFive;
+
+    plusFive(3); // 8
+    // Since f has a function value, it can be invoked.
+    f(9); // 14
+
+
+
+
+
+    Callback Functions:
+    In JavaScript, a callback function is a function that is passed into another function as an argument. This function can then be invoked during the execution of that higher order function (that it is an argument of).
+    Since, in JavaScript, functions are objects, functions can be passed as arguments.
+
+    const isEven = (n) => {
+    return n % 2 == 0;
+    }
+
+    let printMsg = (evenFunc, num) => {
+    const isNumEven = evenFunc(num);
+    console.log(`The number ${num} is an even number: ${isNumEven}.`)
+    }
+
+    // Pass in isEven as the callback function
+    printMsg(isEven, 4);
+    // Prints: The number 4 is an even number: True.
+
+
+    Higher-Order Functions
+    In Javascript, functions can be assigned to variables in the same way that strings or arrays can. They can be passed into other functions as parameters or returned from them as well.
+    A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
+
+
+5-2:
+    Array indexing start at 0
+
+    const movies=["kaleja","dookudu","agadu"]
+    console.log(movies[0])
+    //this prints kaleja
+
+    //you can similarly modify an element in an array
+    movies[0]="spider"
+
+    But you can not redefine the array to be completly another array.
+    movies=["bahubali"]
+    // this will throw an error
+
+    you can initialize an array as empty array
+    prabhas_movies= []
+    prabhas_movies[0]='bahubali'
+    //this adds an element to the array. In the same way you can add new elements to the existing array
+
+    you can mix your data types in an array.
+    [true,1,'god',null]
+
+    array_name.length
+    //this gives the numeber of elements in the array
+
+    arrays are refferential, which means when you copy an array into another variable, it doesn't copy the array.
+    It just sets two variables pointing  to the same data. So if you change the data in one variable it changes for the other automatically.
+
+    To make a copy of an array, use "spread" operator.
+    const x=[5,2,3]
+    const z=[...x]  // this three dots followed by the array variable is called spread operator. use spread operator only if the array is one dimentional
+
+
+5-3:
+    Array methods- mutators
+    These methods modify the array and return a modified item
+
+    let dogs=["lilly", "tobi","zax"]
+    let x=dogs.pop()
+    //.pop() removes the last element in the array and returns it.
+    x will be 'zax' and dogs will be modified to ["lilly", "tobi"]
+
+    dogs.push('zara')
+    //adds the element at the end of the array. Hence the dogs array is modified to ["lilly", "tobi","zara"]
+
+    dogs.shift()
+    //removes the element at the beginning of the array. and returns that first value. So the returned value is "lilly". The dogs array is modified to [ "tobi","zara"]
+
+    dogs.unshift("lilly")
+    //adds the value at beginning of the arrays
+
+    array_name.splice(starting_index,number of elements starting with index that you want to delete,elements that you want to add)
+    //if just want to add after a particular index, you can mention number of elements that you want to delete as 0
+    //array_name.splice() returns an array, which contains the delete items
+    //At the same time the array will be modified with newly added elements
+    let dogs=["max","lilah","cuper"];
+    dogs.splice(1,0,"sam","chole","gorgie")
+    //["max","sam","chole","gorgie","lilah","cuper"] is the new dogs array
+
+
+5-4:
+    Array methods: Accessors
+
+    These methods are used to not modify the original array
+
+    let friends=["vinay", "dam", "pranay"]
+    let x=friends.concat("gnanam")
+    //x becomes ["vinay", "dam", "pranay","gnanam"]. But friends doesn't change , it remains  ["vinay", "dam", "pranay"].
+    // if you want to concat more than one element, you can use friends.concat(["dsds","dhss","dss"])
+    //then the returned array wil be ["vinay", "dam", "pranay","dsds","dhss","dss"]
+
+
+    friends.indexOf("dam")
+    // this returns the index of the element in the array. If the element is absent it returns -1.
+
+    friends.includes("vinay")
+    //returns true if the element is present in the array
+
+    friends.join(deliminator)
+    //this returns a string that combines all the elements seperated by a deliminator
+    //deliminator can be anything such as "," or "|" or "any text you want"
+
+    friends.slice(starting_index, ending_index)
+    // this returns an array from starting_index to the element before the ending_index. So it is exclusive of the ending_index mentioned
+    // if the ending_index is not mentioned, an array from starting_index to the end will be returned
+
+
+5-5:
+    Array methods: iterators
+
+    array_name.forEach((each_array_element)=>{\\code})
+    \\array_name.forEach() is a higher order function, which means it takes a function as input. and each element in the function will be passed as a argument
+
+    let array1=[1,2,3,4]
+    let x=array1.map((num)=>{return num*3})
+    \\ x will be [3,6,9,12]
+    \\so it operates on each element in the array and returns a new array
+
+5-8:
+    objects in javascript are key-value pairs and they are not in any order, as in an array
+
+    const myTruck={
+    make: "chevy",
+    model:"silverado",
+    year:"2015",
+    color:"silver",
+    powerwindow: false,
+    bluetooth: false
+    }
+    // declaring an object
+
+    //to access a value in object , there are two notations
+    myTruck.make
+    //this gives output as "chevy" .But if the key has two words seperated by space, it doesnt work in dot notation
+
+    myTruck["make"]
+    //this gives output as "chevy"
+
+    myTruck.owner="pavan"
+    //this adds a new key-value pair to the object
+
+    //if the key is not present in object it throws errors
+
+    let myvar="color"
+    myTruck[myvar] //this gives the output as "silver"
+    //But myTruck.myvar doesnt work
+
+    //you can edit a value by using
+    myTruck.color= "white"
+
+5-10:
+    Nested objects and arrays
+
+    const post={
+    id="100",
+    author:"pavan",
+    text:"nothing is important",
+    comments:[
+        {author:'jaffa',text:"boring book"},
+        {author:"daffa",text:"sucking duck"},
+        {author:"xxx",text:"lame lamb"}
+    ]
+    }
+
+
+    //these kind of nested objects and arrays are used in API, to pass and receive data
+
+    post.comments[0].text
+    //this gives the output as "boring book"
+
+5-11:
+    object methods
+
+    //method is a function that is attached to something
+    //if it is attached to objects , it becomes object methods.
+    //if is attached to array, it is called array methods. array_name.length is a method
+
+    const posts={
+    user: "pavan",
+    data:['good','bad','ugly'],
+    print:function (){
+        this.data.forEach((comment)=>{console.log(comment)})
+    }
+    }
+    //when ever you write a function inside a object, use function (){} notation instead of
+    // arrow function. But arrow function can be used inside a function.
+    //'this' key word refers to the object in which it is being used. In this case it is referring to posts
+
+
+
+6-2:
+    introduction to DOM(Document Object Model).
+    Basically it is the interface between HTML/CSS and JavaScript.
+    It acts like an API between HTML/CSS and JavaScript
+
+    Why do we need DOM?
+    -interactivity
+    -animations
+    -games
+    -dropdowns
+    -drag and drop , etc
+
+
+6-3:
+    DOM is basically a javascript object, that has HTML/CSS tags conveted into javascript objects.
+    This allows javascript to use HTML/css tags as objects
+
+6-4:
+    Manipulating the DOM
+
+    There are two steps to Manipulating DOM
+    1.Select
+        const myParagraph=document.querySelector("p");
+
+        or
+
+        const myParagraph=document.getElementsByTagName("p");
+    2.Modify
+        myParagraph.style.color="orange"
+
+
+6-5:
+    DOM element selector methods
+
+    1. document.getElementsById("id")
+        # helps you to get the element with specific id
+
+    2. const element= document.getElementsByClassName("class_name")
+        # It gives all the elements with the same class_name.
+        # element[0].style.color=orange
+
+    3. document.getElementsByTagName("h1")
+        # gives you the elements with that tag , be it header or body or Paragraph etc
+        # this gives all the elements in HTMLCollection
+        #HTMLCollection is a list and individual elements should be modified ,
+
+    4. const FirstTitle =document.querySelector("tag_name or #id or .class_name" )
+        # tag_name can be h1, p etc
+        # .id or #class_name is the css equivalent of id and class_name
+        # querySelector targets the first element it comes across, even though there are multiple elements
+        #however querySelector is not efficient as it has to  gothrough everything rather than being specific
+
+    5. const allFlags= document.querySelectorAll("p")
+        # this returns all the elements in a node list
+
+
+
+    Array.from("HTMLCollection")
+    #You can convert HTMLCollection into an array by using Array.from()  and then use Array properties
+
+
+6-6:
+    Modifying DOM Element Text
+
+    const title = document.querySelector("h1")
+    title.textContent="changing the text to whatever i want"
+    # dont use .textContent on elements that have children elements,
+    #for example in case of ordered list and unordered list text inside them consists of all the list item.
+    #so changing text by selecting <ol> or <ul> changes the list element as well
+    #use textContent when ever possible to change the text as it is more secure and safe compared to other methods
+
+
+
+    const list= document.querySelector("ol")
+    list.innerHTML
+    #this gives a string that consists of HTML code within the ordered List
+    #  "<li><a href="google.com"> google</li>
+        <li><a href="yahoo.com"> yahoo</li>
+        <li><a href="goduck.com"> goduck</li> "
+
+    #if you want to change the HTML code, you can use. But this is not a good practice as it allows cross-site scripting ,
+      if anyone is trying to attack your website
+    list.innerHTML="<li>google</li>"
+
+
+6-7:
+    "common css properties reference" in MDN docs website
+
+
+6-8:
+    #to get the classes under a tag use. This a read only list and can be modified only using ".add",".remove",".toggle"
+    document.querySelector("p").classList
+
+    #if you want to add a class to the tag
+    document.querySelector("p").classList.add("class_name")
+
+    #if you want to remove a class from tag
+    document.querySelector("p").classList.remove("class_name")
+
+    #another useful functionality is "classList.toggle". this adds the class if its not there, if its there it removes
+    document.querySelector("p").classList.toggle("class_name")
+
+
+6-9:
+    Modifying Dom Element Attributes
+
+    Attributes are inside the tags like "href", "src"
+
+    document.querySelector("a").getAttribute("href")
+    #this gives the value to the key "href", such as the "https://google.com",i.e link
+
+    document.querySelector("a").setAttribute("href","http://wonderla.in")
+    #this changes the attribute value to new address
+
+
+6-10:
+    Introduction to DOM Events
+
+
+    "Event reference" from MDN Docs
+    Events are fired to notify code of "interesting changes" that may affect code execution.
+    These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system),
+    and other causes.
+
+    Event listener are used to listen to the events and then perform a function
+    When ever the event listener gets triggered it is called  "event getting fired"
+
+    document.querySelector("h1").addEventListener('event_name',function() {
+     console.log("event was triggerd")
+     document.querySelector("p").textContent="change the text"
+    })
+
+
+    you can declare the function once and can use it multiple times when ever the event gets triggered
+
+    const addRed=function(){
+        this.style.backgroundColor="red"
+    }
+    document.querySelector("h1").addEventListener("click", addRed)
+    document.querySelector("p").addEventListener("click",addRed)
+    document.querySelector("li").addEventListener("click",addRed)
+
+    ###note
+    Always use traditional function declarations for event listeners. Because "this" functionality
+    works only  in traditional function declaration, while arrowfunction gives an error
+
+     

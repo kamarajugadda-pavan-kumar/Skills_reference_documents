@@ -1,0 +1,344 @@
+===================The net ninja youtube channel=========
+
+
+class-1:
+    what is react?
+    -javascript library used to create websites
+    -allows us to easily create Single Page Apps(SPA's)
+
+    By single page it means, server only needs to send a single HTML page ever to the browser for the website to run fully.
+    And then react takes over and manages the whole website in the browser including any kind of website data or user interactivity such as click events
+    and even routing from page to page. User can navigate from page to page, but those pages are not sent to the browser from the server.
+    Instead react changes all the content in the browser depending on the route of the url of the link the user clicks.
+
+
+ class-2:
+    In the command line after installing node, use "npx create-react-app xxxxxxxx" .xxxxxx-> is your app name
+    'public' folder consists of all the files that are public to the browser.
+    public/index.html is the ultimate html file that is sent to the browser. All the react components are injected into this file.
+    'src' folder contains all the components of the react app.
+    src/index.js collects all the components in the "src" folder and renders it to index.html to create page
+    'package.json' consists of all the dependencies that our file depends on. Scripts are used to preview our application or build or test or eject.
+
+    'npm run start' command sarts a local decvelopment server, so that we can preview our web application in a browser
+
+    'node_modules' folder contains all the dependencies required for the project to work. But when the project is shared on git node_modules folder is
+    not shared. Because all the dependencies can be installed using 'package.json' file information, use 'npm install'
+    command(this looks inside package.json and install all dependencies)
+
+class-3:
+    components are the bulding blocks of any react application.
+    A typical webpage built with react might be made up of several components.
+    Each component is a self contained section of content. Example Navbar, sideBar, article etc.
+
+    Each of the component contains its own
+        1)Template
+        2)Logic
+
+    Inside each component there is a function whose name should always be starting with capital letter.
+    The function returns a JSX (which has syntax identical to html but there are some differences)
+    JSX allows us to create html style templates and components, in the background a transpiler called 'babel' converts all this JSX into html and renders
+     it to DOM.
+
+class-4:
+    Inside components ,you can use variables to put dynamic values in templates.
+
+    function App(){
+        const display='this is a new app'
+        const link='https://www.google.com'
+        return(
+            <div className='App'>
+                <div className='content'>
+                    <h1>{display}</h1>
+                    <a href={link}>google site</a>
+                </div>
+            </div>
+        )
+    }
+
+class-5:
+    Root component is the first component that gets rendered to the Dom and it sits at the top of our index.js file.
+    If we wish to make more components we nest them inside the root component. If you want further components they could be nested inside them.
+                          root component
+                                |
+                                |
+                ---------------------------------
+                |               |                |
+                |               |                |
+           Navbar.js      BlogDetails.js      sideBar.js
+                                                 |
+                                                 |
+                                            -------------
+                                            |            |
+                                            |            |
+                                    categories.js      Tags.js
+
+
+class-6:
+    In line style is written as
+    <h1 style={{color:'white', backgroundColor:'green'}}> hey hello</h1>
+
+    if a styling is used for a component, it is applied on all components that are visible on the page
+
+class-7:
+    click events
+
+    onclick is the keyword here
+    'e' is the event and contains information about event
+
+    const Home=()=>{
+
+        const handleClick=(e)=>{
+            console.log('hello, ninjas',e)
+        }
+
+        const handleClickAgain=(name,e)=>{
+            console.log('hello'+ name,e.target);
+        }
+
+        return(
+            <div className='home'>
+                <h2>Homepage</h2>
+                <button onclick={handleClick}>click me</button>
+
+                ##if you want to pass in a value use arrow function
+                <button onclick={(e)=>handleClickAgain('mario',e)}>click me again</button>
+            </div>
+        )
+    }
+
+class-8:
+     'State' of a component means the data that is being used in that point of time.
+     State could be an array of values, booleans, strings, objects etc anything that our component uses .
+
+     To make the variables reactive( react looks for these variables to change and re-renders the template with the changes) we need 'hooks'.
+
+     'Hook' in react is a special type of function that a does a special type of job to make the variables reactive.
+            import {useState} from 'react';
+
+            const Home=()=>{
+
+            ##const [name_of_variable,functionName]=useState('mario');
+            ##'useState' function takes in a input(value of the variable) and returns two objects. so the output is caught in a [].
+            ##'name_of_variable' is use to store 'mario' value
+            ##'functionName' is a function which we can use to change the name_of_variable
+
+            const [name,setName]=useState('mario');
+
+            const handleClick=()=>{
+                setName('luigi')
+            }
+
+            return(
+                <div className='home'>
+                    <p>{name}</p>
+                    <button onclick={handleClick}>click me</button>
+                </div>
+            )
+            }
+
+
+class-9:
+    In chrome you can add a chrome-extention called 'React Developer Tools'
+
+
+
+
+
+
+
+
+=======================JSX rules=====================
+1)No function declaration
+2)loops like 'for' and 'while' are not allowed (instead map and filter can be used)
+3)if-else not allowed (ternary operator is allowed  ? ---:----)
+4)object rendering not allowed
+
+
+
+=========================state=================
+state tells about the current condition of a component
+
+===================super()==============
+super() inside constructor allows us to use 'this ' functionality
+===========render()=============
+render() in class component will display the return code as UI
+
+
+
+
+
+
+===========Installation==============
+
+1)npx create-react-app
+2)React extention
+3)npm start
+4)File structure
+5)Removing unnecessary code
+6)ReactDOM.render
+7)Import/Export
+
+
+
+===============css in react=========
+1)Inline css
+    style={{display:'flex',background:'blue'}}
+2)objectf
+3)external css file
+4)external module file
+
+
+
+
+==================life cycle methods==============
+constructor()---->render---->componentDidMount()---->render()---->componentDidUpdate()---->componentWillUnmount()
+
+In class components of react
+
+1)mounting --->when the component is getting mounted on DOM for the first time
+    constructor()
+    render()
+    componentDidMount()=> sideeffects like api calls which can take time
+
+
+2)updating---->Rerendering after a state change
+    render()
+    componentDidUpdate()
+
+
+3)unmounting--->when the component is being removed from the page or moving to a new page
+    componentWillUnmount()
+
+
+
+============ react-router-dom ===============
+'BrowserRouter' allows you to use the react router, so its unmounts and mounts the components required
+'switch' does not allow multiple routes to render, instead it allows only one, the first one it encounters.
+'exact' allows the route to render only when it is a exact match
+
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+function App(){
+    <Router>
+        <Navbar />
+
+        <Switch>
+        <Route path='/' exact component={Movies} />
+        <Route path='/favourites' component={Favourites} />
+        <Banner />
+        </Switch>
+
+    </Router>
+}
+
+
+
+==============<Link to=''>=========
+import {Link} from 'react-router-dom'
+'Link' is used to go to different routes from inside a react component.
+
+ Link is similar to <a> tag, but the difference is <a> tag refreshes the page. But Link doesn't refresh the page. So the states remain in place.
+
+
+
+=============render method in react-router-dom============
+if you want to render more than one component from a route, you can use render method
+And also you can send props, both the default ones and customized one like name and age
+<Route path='/' exact render={(props)=>(
+    <>
+        <Banner {...props} name='pavan' age=24/>
+        <Movies {...props} />
+
+    </>
+)}/>
+
+
+
+
+===========================================================
+fontawesome.com
+
+it gives images for frontend
+
+
+
+
+
+
+
+======================Hooks=================================
+
+Hooks is a new concept introduced in react.
+
+Before hooks were introduced for
+for static UI-> functional components
+for Dynamic UI->class components
+
+
+After hooks were introduced
+even functional components can use state, Life cycle methods.So can generate dynamic UI
+Now functional components are easy to use and most developers are shifting to functional components.
+Hooks: they are the functions that let you hook into react state and lifecycle features from functional components.
+There are two hooks
+    1)useState
+    2)useEffect
+
+
+how to use useState?
+
+import React,{useState} from 'react'
+function xyz(){
+    #declare the state variable
+    const [count,setCount]=useState(0);
+    return(
+        <div>
+            <h1>current count</h1>
+            <button onClick={()=>setCount(count+1)}>+1</button>
+        </div>
+    )
+}
+export default xyz;
+
+
+how to use useEffect?
+The purpose of useEffect hook is to enable us to use lifecycle methods
+(componentDidMount, componentDidUpdate, componentWillUnmount)
+of class component in functional component
+useEffect runs after the component is returned to UI.
+
+
+import React,{useState,useEffect} from 'react'
+
+function xyz(){
+    const [count,setCount]=useState(0);
+    useEffect(()=>{
+        console.log('useEffect');
+        document.title=
+    },//optional dependency array)
+    return(
+        < >
+
+        </>
+    )
+}
+
+
+If nothing is passed as optional dependency array,the useEffect hook acts as both componentDidMount and componentDidUpdate.
+If empty array [] is passed as optional dependency array, the useEffect acts as only componentDidMount. which means it runs only once when the component is
+ mounted.
+If array consisting of [stateVariable] is passed as optional dependency array, useEffect runs only when the state of that variable changes.
+
+
+Now in useEffect, you can do sideeffects works such as doing api calls(which in class component we used to do in lifecycle methods).
+
+Note:Objects such as {msg:'hello'} are created in heap. so when using objects as a state variable you need to use spread operator while updating state.
+        const [text,setText]=useState({msg:hello});
+        text.msg='namaskar';
+        setText({...text}); #you should use spread operator, so that address of text changes and react knows there is some change in state.
+                            #If the address of the state variable remains same, the sate doesn't get updated.
+
+
+
+
+
+=========================context API===========================

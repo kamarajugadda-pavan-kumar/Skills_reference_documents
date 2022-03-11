@@ -1,0 +1,35 @@
+week:2
+React is a javascript library , which can be integrated with any kind of back-end technologies.
+For example it can be used with Django,Mysql,Larvel, ruby on Rails
+
+
+week:3
+
+To create a new react app
+npx create-react-app app-name
+
+To start the development server
+npm start 
+
+To bundle the app into static files for production
+npm run build
+
+importing a component
+import componentName from "file path"
+
+importing a file 
+import "file path"
+
+to pass some information to the component
+<Button title="happy" />
+
+in the component you receive the information 
+Button=({title})=>{
+    <button>{title}</button>
+}
+
+
+Week_4:
+
+All the components should start with a capital letter, thats the convention
+
