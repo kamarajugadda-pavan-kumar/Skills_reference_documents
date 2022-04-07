@@ -1,0 +1,60 @@
+keyword research:
+  resume should be keyword rich for the bots to access them.
+  keywords like web-developer and web-engineer matter, although they might sound same.
+  look in the job application and prepare the resume for that particulalar job and keywords mentioned in it.
+  
+  writing ReactJs, React Js, React.js matters. All the spaces and charecters matter.
+  Spelling mistakes are a big no.
+  
+single page resume:
+ 
+spend time to articulate the things in your resume
+
+dont write irrelavent things such as powerpoint, excel etc. until it is relavent to your job
+
+
+Divide the technical skills section into 2 parts. one is skills that you are proficient in and second is the skills that you are familiar with
+
+double check resume for spelling mistakes.
+
+export your resume such that it is named as "your name" and "position that you are applying for"
+Always make your resume in black asd white.
+always a PDF format
+ 
+Dont choose fancy fonts, use simple fonts and limit white spaces.
+
+Bold only limited amount of text that you want to highlight.
+Make sure that the content is in rectangular blocks and not curvy on either sides.
+
+
+Articulate the projects in a way to create enthusiasm in the reader.
+
+donot write a career objective
+
+career and skills section should be at top
+
+Dont write big paragraphs. write the content in crisp bullet points.
+write about how your project impacted the business. How relavent the project is.
+How much efficiency it has brought in.
+code efficieny 
+convience for customers.
+algorithms that have been used.
+challenges you have solved.
+skills you have gathered.
+
+
+education section:
+  dont put school education in resume.
+  put your graduation details
+  
+Acheivements:
+  anything related to coding competitions and opensource contributions etc.
+  hackerRank, code chef ranks etc.
+  
+courses and certifications:
+  
+weblinks:
+  email, linkedin, github, projects etc
+  
+
+
