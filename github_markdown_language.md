@@ -28,4 +28,4 @@
   # Links
   This site was built using [GitHub Pages](https://pages.github.com/).
   
-  [Relative links](/Git and GitHub notes.txt)
+  [Relative links](./Git and GitHub notes.txt)
