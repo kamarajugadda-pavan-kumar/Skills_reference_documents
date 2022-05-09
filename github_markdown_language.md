@@ -31,3 +31,5 @@
   [Relative links](./Git_and_GitHub_notes.txt)
   
   ![image](https://foundations.projectpythia.org/_images/GitHub-logo.png)
+  
+  # [using relative links](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images)
