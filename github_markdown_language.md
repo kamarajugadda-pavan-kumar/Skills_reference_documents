@@ -28,4 +28,6 @@
   # Links
   This site was built using [GitHub Pages](https://pages.github.com/).
   
-  [Relative links](./Git and GitHub notes.txt)
+  [Relative links](./Git_and_GitHub_notes.txt)
+  
+  ![image](https://foundations.projectpythia.org/_images/GitHub-logo.png)
