@@ -27,6 +27,22 @@ create a repository in GitHub and clone it to local storage using the Command
 The link to clone can be obtained from the GitHub site ->repository ->code->clone
 
 Then if user.email and user.name are not congigured , doit
+```
+git congif --get user.email
+git config --get user.name
+git config user.email "pavankd12@gmail.com"
+git config user.name "pavan_kumar"
+```
+
+To check the remote origin
+```
+git remote -v 
+```
+
+To set remote origin
+```
+git remote add git@github.com:kamarajugadda-pavan-kumar/git_demo2.git
+```
 
 To know the status use Command
 'git status'
