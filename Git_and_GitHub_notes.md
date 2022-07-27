@@ -6,18 +6,28 @@ The management of changes to documents, computer programs, large websites, and o
 
 Terms:
 -Directory-> Folder
+
 -Terminal or Command Line->Interface for Text Commands
+
 -CLI->Command Line Interface
+
 -cd->change Directory
+
 -Code Editor->Word processor for writing Code
+
 -Repository->Project, or the folder/place where your project is kept
+
 -GitHub->A website to host your repositories online
 
 Git Commands:
 clone-> bring a repository that is hosted somewhere like GitHub into a folder on your local machine
+
 add->track your files and changes in Git
+
 commit->save your files in Git
+
 push->upload Git commits to a remote repo, like GitHub
+
 pull->Download changes from remote repo to your local machine, the opposite of push
 
 
@@ -52,9 +62,13 @@ To add a file for git to track use Command 'git add file_name' or 'git add .'  ,
 To commit the changes made in the files use command "git commit -m 'any message about commit' "
 
 To push the code to github , first create a public and private key using
+
 "ssh-keygen -t rsa -b 4096 -C 'pavankd12@gmail.com' "
+
 then print the key in '.pub' file using command 'type filename.pub'
+
 then add the ssh key printed in the GitHub website
+
 Then use command 'git push origin branch_name'
 
 
@@ -88,19 +102,21 @@ changes made on one branch can't be seen on other branch.
 
 ===============pull request=====================
 you can merge the branches by making a pull request from the feature branch, this can be done on GitHub
+
 Now once the pull request is made , all the other users working on the project can see the changes and discuss and finally merge the branches.
 
 
+
 The merged branch needs to be pulled on to local environment to see the changes, use command
-'git pull origin main'
+`git pull origin main`
 
 The merged branch is now redundant and can be deleted using the command
-'git branch -d branch_name'
+`git branch -d branch_name`
 
 
 
 ===========conflict==============
-when you work on a big project master branch also gets updated, inorder to stay updated with the master branch you 'git merge master'.
+when you work on a big project master branch also gets updated, inorder to stay updated with the master branch you `git merge master`.
 If there are any conflict you need to resolve and then commit on your branch and then start working on your branch again.
 
 
